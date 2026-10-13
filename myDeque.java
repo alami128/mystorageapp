@@ -43,4 +43,40 @@ public class myDeque {
     return removed;
     
 }
+    public FoodItem removeBack()
+    {
+     if(isEmpty()){
+         System.out.println("storage is empty ");
+        return null ;      
+     }
+    FoodItem removed = slots[0];
+    for (int i =0 ; i<count -1 ; i++ ){
+    slots[i] = slots[i+1]; 
+    
+    
+    }
+       slots[count - 1] = null ;
+       count = count -1 ; 
+       return removed ; 
+    
+    }
+    
+    public FoodItem peek() {
+    if (isEmpty()) {
+        System.out.println("Storage is empty");
+        return null;
+    }
+    return slots[count - 1];
+}
+    
+    public void display() {
+    if (isEmpty()) {
+        System.out.println("Storage is empty");
+        return;
+    }
+    for (int i = 0; i < count; i++) {
+        System.out.println(i + ": " + slots[i].name + " | " + slots[i].weight + " g | best before " + slots[i].bestBefore);
+    }
+}
+    
 }
