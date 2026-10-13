@@ -13,5 +13,14 @@ public class myDeque {
     
     FoodItem[] slots = new FoodItem[8];
     int count = 0;
+      public boolean isEmpty() {
+        return count == 0;
+    }
+
+    public boolean isFull() {
+        return count == 8;
+    }
     
+    
+
 }
