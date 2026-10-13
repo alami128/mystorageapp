@@ -10,4 +10,8 @@ package mystorageapp;
  */
 public class myDeque {
     
+    
+    FoodItem[] slots = new FoodItem[8];
+    int count = 0;
+    
 }
