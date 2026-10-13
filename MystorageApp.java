@@ -15,11 +15,60 @@ public class MystorageApp {
      */
     public static void main(String[] args) {
         
-        FoodItem test = new FoodItem("newfood",140 ,java.time.LocalDate.now().plusDays(5));
-        System.out.println("Foof name : " + test.name);
-        System.out.println("Food weight : " + test.weight);
-        System.out.println("Food Date : " + test.bestBefore);
-        System.out.println("Food Placed Date : " + test.timePlaced);
+       java.util.Scanner input = new java.util.Scanner(System.in);
+        myDeque storage = new myDeque();
+        int choice = 0 ;
+        
+        while(choice != 5) {
+        
+            System.out.println();
+            System.out.println("1 - Add Food ");
+            System.out.println("2 - Remove Food ");
+            System.out.println("3 - See Top Item ");
+            System.out.println("4 - Show All ");
+            System.out.println("5 - Exit ");
+            System.out.println(" Choose : ");
+        
+            choice = input.nextInt() ;
+            
+            
+            if ( choice == 1 ) {
+                // Food Name :
+                
+                System.out.println("Food Name " );
+                String name = input.next();
+               
+                // Food weight : 
+                
+                System.out.print("Weight in grams: ");
+                double weight = input.nextDouble();
+                
+                // Best Before 
+                
+                System.out.print("Days until best before: ");
+                int days = input.nextInt();
+                
+                java.time.LocalDate date = java.time.LocalDate.now().plusDays(days);
+                
+                storage.add(new FoodItem(name, weight, date));
+   
+                
+                
+            
+            
+            
+            
+            }
+        
+        
+        
+        
+        
+        
+        
+        
+        }
+        
         
     }
     
