@@ -21,6 +21,26 @@ public class myDeque {
         return count == 8;
     }
     
-    
+    public void add(FoodItem item) {
+        if (isFull()) {
+            System.out.println("Storage is full");
+            return;
+        }
+        slots[count] = item;
+        count = count + 1;
+    }
 
+    public FoodItem removeFront() {
+    if (isEmpty()) {
+        System.out.println("Storage is empty");
+        return null;
+    }
+    
+    
+    FoodItem removed = slots[count - 1];
+    slots[count - 1] = null;
+    count = count - 1;
+    return removed;
+    
+}
 }
