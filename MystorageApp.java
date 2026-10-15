@@ -110,6 +110,7 @@ public class MystorageApp {
 
     } else {
         System.out.println("Wrong choice, try 1 to 5");
+                System.out.println("uuu");
     }
 }
             
