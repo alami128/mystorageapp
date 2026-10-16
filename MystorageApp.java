@@ -105,16 +105,18 @@ public class MystorageApp {
               } else if (choice == 4) {
         storage.display();
 
-    } else if (choice == 5) {
-        System.out.println("Goodbye");
+      } else if (choice == 5) {
+                System.out.println("Goodbye");
 
-    } else {
-        System.out.println("Wrong choice, try 1 to 5");
-                
+            } else {
+                System.out.println("Wrong choice, try 1 to 5");
+      }
+        }
     }
 }
-            
-            }
-}
+
+    
+    
+    
 
         
