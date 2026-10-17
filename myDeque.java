@@ -10,7 +10,7 @@ package mystorageapp;
  */
 public class myDeque {
     
-    
+  // Array of 8 slots to hold the food items
     FoodItem[] slots = new FoodItem[8];
     int count = 0;
       public boolean isEmpty() {
@@ -20,7 +20,7 @@ public class myDeque {
     public boolean isFull() {
         return count == 8;
     }
-    
+    // Add Food Item Operation 
     public void add(FoodItem item) {
         if (isFull()) {
             System.out.println("Storage is full");
@@ -29,7 +29,7 @@ public class myDeque {
         slots[count] = item;
         count = count + 1;
     }
-
+// Remove From the Front Side  Operation 
     public FoodItem removeFront() {
     if (isEmpty()) {
         System.out.println("Storage is empty");
@@ -43,6 +43,8 @@ public class myDeque {
     return removed;
     
 }
+    
+    // Remove From the Back Side  Operation 
     public FoodItem removeBack()
     {
      if(isEmpty()){
@@ -60,7 +62,7 @@ public class myDeque {
        return removed ; 
     
     }
-    
+    // Show the Top Item Operation 
     public FoodItem peek() {
     if (isEmpty()) {
         System.out.println("Storage is empty");
@@ -68,6 +70,8 @@ public class myDeque {
     }
     return slots[count - 1];
 }
+    // Display Operation: shows every food item in the storage, 
+    // from back to front 
     
     public void display() {
     if (isEmpty()) {
