@@ -9,6 +9,9 @@ import java.time.LocalDateTime;
  *
  * @author simo
  */
+
+// Food Item Class 
+
 public class FoodItem {
     String name ;
     double weight ;
